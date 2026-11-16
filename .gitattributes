@@ -1,0 +1,8 @@
+# Treat documents and images as binary so diffs and pull requests never try to read them as text
+*.pdf  binary
+*.jpg  binary
+*.jpeg binary
+*.png  binary
+*.gif  binary
+*.webp binary
+*.ico  binary
