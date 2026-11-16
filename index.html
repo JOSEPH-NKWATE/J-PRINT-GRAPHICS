@@ -9,37 +9,50 @@
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-        <title>EL JOSEPH NKWATE Portfolio</title>
+        <title>EL JOSEPH NKWATE Portfolio | NJ Graphics</title>
+        <meta name="description" content="NJ Graphics by Joseph Ndomu: graphic design, branding and printing in Yaoundé, Cameroon. See the work, get in touch, or hire Joseph for tech support and web management.">
+        <link rel="alternate" hreflang="en" href="https://njgraphics.netlify.app/?lang=en">
+        <link rel="alternate" hreflang="fr" href="https://njgraphics.netlify.app/?lang=fr">
+
+        <!-- =====TRANSLATIONS (all site text, FR + EN) ===== -->
+        <script src="assets/js/i18n.js"></script>
     </head>
     <body>
         <!--===== HEADER =====-->
         <header class="l-header">
             <nav class="nav bd-grid">
                 <div>
-                    <a href="#" class="nav__logo">EL JOSEPH.N</a>
+                    <a href="#" class="nav__logo" data-i18n-aria="nav.logo" aria-label="EL JOSEPH.N, back to top">EL JOSEPH.N</a>
                 </div>
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                        
+                        <li class="nav__item"><a href="#home" class="nav__link active-link" data-i18n="nav.home">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link" data-i18n="nav.about">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link" data-i18n="nav.skills">Skills</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link" data-i18n="nav.work">Work</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link" data-i18n="nav.contact">Contact</a></li>
+                        <li class="nav__item"><a href="#hire" class="nav__link nav__hire"><i class='bx bx-briefcase' aria-hidden="true"></i> <span data-i18n="nav.hire">Hire Me</span></a></li>
+
                      <!---   <li class="logo-container">
                             <a href="" class="logoimg">
                               <img src="assets/img/logo.png" alt="Logo">
                             </a>
                           </li>
-                        ---> 
-                        
+                        --->
+
                     </ul>
                 </div>
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
+                <!--===== LANGUAGE SWITCH =====-->
+                <div class="lang-switch" role="group" aria-label="Choose language" data-i18n-aria="lang.label">
+                    <button type="button" class="lang-switch__btn" data-lang="fr" lang="fr" aria-pressed="false">FR</button>
+                    <button type="button" class="lang-switch__btn" data-lang="en" lang="en" aria-pressed="true">EN</button>
                 </div>
+
+                <button type="button" class="nav__toggle" id="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Open menu" data-i18n-aria="nav.menu">
+                    <i class='bx bx-menu' aria-hidden="true"></i>
+                </button>
             </nav>
         </header>
 
@@ -47,20 +60,34 @@
             <!--===== HOME =====-->
             <section class="home bd-grid" id="home">
                 <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">JOSEPH.N</span><br> Graphic Designer</h1>
+                    <h1 class="home__title" data-i18n-html="home.title.html">Hi,<br>I'm <span class="home__title-color">JOSEPH.N</span><br> Graphic Designer</h1>
 
-                    <a href="https://wa.me/message/B34WHMI4IFMAK1" class="button">Contact</a>
+                    <a href="https://wa.me/message/B34WHMI4IFMAK1" class="button" data-i18n="home.contact">Contact</a>
+
+                    <!--===== TWO PATHS: clients / employers =====-->
+                    <nav class="home__paths" aria-label="What brings you here?" data-i18n-aria="paths.label">
+                        <a href="#work" class="path-card">
+                            <i class='bx bx-printer path-card__icon' aria-hidden="true"></i>
+                            <span class="path-card__title" data-i18n="paths.client.title">I need printing / design</span>
+                            <span class="path-card__text" data-i18n="paths.client.text">See my work</span>
+                        </a>
+                        <a href="#hire" class="path-card path-card--hire">
+                            <i class='bx bx-briefcase path-card__icon' aria-hidden="true"></i>
+                            <span class="path-card__title" data-i18n="paths.hire.title">I want to hire Joseph</span>
+                            <span class="path-card__text" data-i18n="paths.hire.text">CV and experience</span>
+                        </a>
+                    </nav>
                 </div>
 
                 <div class="home__social">
-                    <a href="" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="" class="home__social-icon"><i class='bx bxl-behance' ></i></a>
-                    <a href="" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-                    <a href="https://wa.me/message/B34WHMI4IFMAK1" class="home__social-icon"><i class='bx bxl-whatsapp' ></i></a>
+                    <a href="https://www.linkedin.com/in/joseph-ndomu-403250239" class="home__social-icon" aria-label="LinkedIn" target="_blank" rel="noopener"><i class='bx bxl-linkedin'></i></a>
+                    <a href="" class="home__social-icon" aria-label="Behance"><i class='bx bxl-behance' ></i></a>
+                    <a href="" class="home__social-icon" aria-label="GitHub"><i class='bx bxl-github' ></i></a>
+                    <a href="https://wa.me/message/B34WHMI4IFMAK1" class="home__social-icon" aria-label="WhatsApp"><i class='bx bxl-whatsapp' ></i></a>
                 </div>
 
                 <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-label="Portrait of Joseph Ndomu" data-i18n-aria="home.photo">
                         <mask id="mask0" mask-type="alpha">
                             <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
                         </mask>
@@ -74,28 +101,28 @@
 
             <!--===== ABOUT =====-->
             <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
+                <h2 class="section-title" data-i18n="about.title">About</h2>
 
                 <div class="about__container bd-grid">
                     <div class="about__img">
-                        <img src="assets/img/about.jpg" alt="">
+                        <img src="assets/img/about.jpg" alt="Joseph Ndomu, graphic designer at NJ Graphics" data-i18n-alt="about.alt" width="640" height="841" loading="lazy" decoding="async">
                     </div>
-                    
+
                     <div>
-                        <h2 class="about__subtitle">I'm JOSEPH N.  </h2>
-                        <p class="about__text"> I'm a skilled graphic designer specializing in branding, print, and digital media. With years of experience working on diverse projects, including corporate branding, custom souvenirs, and event designs, I bring creativity and precision to every project.</p>           
-                    </div>                                   
+                        <h2 class="about__subtitle" data-i18n="about.subtitle">I'm JOSEPH N.</h2>
+                        <p class="about__text" data-i18n="about.text"> I'm a skilled graphic designer specializing in branding, print, and digital media. With years of experience working on diverse projects, including corporate branding, custom souvenirs, and event designs, I bring creativity and precision to every project.</p>
+                    </div>
                 </div>
             </section>
 
             <!--===== SKILLS =====-->
             <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
+                <h2 class="section-title" data-i18n="skills.title">Skills</h2>
 
-                <div class="skills__container bd-grid">          
+                <div class="skills__container bd-grid">
                     <div>
-                        <h2 class="skills__subtitle">Who We Are and What We Do</h2>
-                        <p class="skills__text">I head the design and graphic sector at Ballo Doxa, a small organization dedicated to creative and quality designs. We handle everything from branded souvenirs like mugs, pens, and bags to banners, books, and event materials. Whether it's for businesses, NGOs, or personal projects, we work hard to bring your ideas to life with unique designs and timely delivery. We've had the privilege of working with clients like MTN Cameroon and KOICA, and we're here to help you with your design needs too.</p>
+                        <h2 class="skills__subtitle" data-i18n="skills.subtitle">Who We Are and What We Do</h2>
+                        <p class="skills__text" data-i18n="skills.text">I head the design and graphic sector at Ballo Doxa, a small organization dedicated to creative and quality designs. We handle everything from branded souvenirs like mugs, pens, and bags to banners, books, and event materials. Whether it's for businesses, NGOs, or personal projects, we work hard to bring your ideas to life with unique designs and timely delivery. We've had the privilege of working with clients like MTN Cameroon and KOICA, and we're here to help you with your design needs too.</p>
                        <!-- <div class="skills__data">
                             <div class="skills__names">
                                 <i class='bx bxl-html5 skills__icon'></i>
@@ -114,7 +141,7 @@
                                 <span class="skills__name">CSS3</span>
                             </div>
                             <div class="skills__bar skills__css">
-                                
+
                             </div>
                             <div>
                                 <span class="skills__percentage">85%</span>
@@ -126,7 +153,7 @@
                                 <span class="skills__name">JAVASCRIPT</span>
                             </div>
                             <div class="skills__bar skills__js">
-                                
+
                             </div>
                             <div>
                                 <span class="skills__percentage">65%</span>
@@ -138,7 +165,7 @@
                                 <span class="skills__name">UX/UI</span>
                             </div>
                             <div class="skills__bar skills__ux">
-                                
+
                             </div>
                             <div>
                                 <span class="skills__percentage">85%</span>
@@ -146,38 +173,38 @@
                         </div>
                     </div>
                 -->
-                    <div>              
-                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
+                    <div>
+                        <img src="assets/img/work3.jpg" alt="Branded print products designed by Ballo Doxa" data-i18n-alt="skills.alt" class="skills__img" width="640" height="426" loading="lazy" decoding="async">
                     </div>
                 </div>
             </section>
 
             <!--===== WORK =====-->
             <section class="work section" id="work">
-                <h2 class="section-title">Work</h2>
+                <h2 class="section-title" data-i18n="work.title">Work</h2>
 
                 <div class="work__container bd-grid">
                     <a href="" class="work__img">
-                        <img src="assets/img/work1.jpg" alt="">  
+                        <img src="assets/img/work1.jpg" alt="Design and print project by NJ Graphics" data-i18n-alt="work.alt" width="640" height="426" loading="lazy" decoding="async">
                     </a>
                     <a href="" class="work__img">
-                        <img src="assets/img/work2.jpg" alt="">
+                        <img src="assets/img/work2.jpg" alt="Design and print project by NJ Graphics" data-i18n-alt="work.alt" width="640" height="426" loading="lazy" decoding="async">
                     </a>
                     <a href="" class="work__img">
-                        <img src="assets/img/work7.jpg" alt="">
+                        <img src="assets/img/work7.jpg" alt="Design and print project by NJ Graphics" data-i18n-alt="work.alt" width="640" height="426" loading="lazy" decoding="async">
                     </a>
-                    
-                   
+
+
                     <a href="" class="work__img">
-                        <img src="assets/img/work6.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work11.jpg" alt="">
+                        <img src="assets/img/work6.jpg" alt="Design and print project by NJ Graphics" data-i18n-alt="work.alt" width="1280" height="1024" loading="lazy" decoding="async">
                     </a>
                     <a href="" class="work__img">
-                        <img src="assets/img/work44.jpg" alt="">
+                        <img src="assets/img/work11.jpg" alt="Design and print project by NJ Graphics" data-i18n-alt="work.alt" width="640" height="426" loading="lazy" decoding="async">
                     </a>
-                    
+                    <a href="" class="work__img">
+                        <img src="assets/img/work44.jpg" alt="Design and print project by NJ Graphics" data-i18n-alt="work.alt" width="640" height="426" loading="lazy" decoding="async">
+                    </a>
+
                 </div>
 
 
@@ -185,22 +212,22 @@
 
             <div class="work__container bd-grid">
                 <a href="" class="work__img">
-                    <img src="assets/img/work883.jpg" alt="">
+                    <img src="assets/img/work883.jpg" alt="Design and print project by NJ Graphics" data-i18n-alt="work.alt" width="640" height="426" loading="lazy" decoding="async">
                 </a>
                 <a href="" class="work__img">
-                    <img src="assets/img/work10.jpg" alt="">
+                    <img src="assets/img/work10.jpg" alt="Design and print project by NJ Graphics" data-i18n-alt="work.alt" width="640" height="426" loading="lazy" decoding="async">
                 </a>
                 <a href="" class="work__img">
-                    <img src="assets/img/work88.jpg" alt="">
+                    <img src="assets/img/work88.jpg" alt="Design and print project by NJ Graphics" data-i18n-alt="work.alt" width="640" height="426" loading="lazy" decoding="async">
                 </a>
                 <a href="" class="work__img">
-                    <img src="assets/img/work99.jpg" alt="">
+                    <img src="assets/img/work99.jpg" alt="Design and print project by NJ Graphics" data-i18n-alt="work.alt" width="640" height="426" loading="lazy" decoding="async">
                 </a>
                 <a href="" class="work__img">
-                    <img src="assets/img/work4.jpg" alt="">
+                    <img src="assets/img/work4.jpg" alt="Design and print project by NJ Graphics" data-i18n-alt="work.alt" width="640" height="426" loading="lazy" decoding="async">
                 </a>
                 <a href="" class="work__img">
-                    <img src="assets/img/work8811.jpg" alt="">
+                    <img src="assets/img/work8811.jpg" alt="Design and print project by NJ Graphics" data-i18n-alt="work.alt" width="640" height="426" loading="lazy" decoding="async">
                 </a>
             </div>
             <!--------------------------->
@@ -208,7 +235,7 @@
 
             <!--===== CONTACT =====-->
             <section class="contact section" id="contact">
-                <h2 class="section-title">Contact +237 676731632</h2>
+                <h2 class="section-title"><span data-i18n="contact.title">Contact</span> <a href="tel:+237676731632" class="contact__phone" aria-label="Call +237 676 731 632" data-i18n-aria="contact.call">+237 676731632</a></h2>
                <!------
                 <div class="contact__container bd-grid">
                     <form action="" class="contact__form">
@@ -220,26 +247,156 @@
                 </div>
                 --->
             </section>
+
+            <!--===== HIRE ME (employers & recruiters) =====-->
+            <section class="hire section" id="hire" aria-labelledby="hire-title">
+                <h2 class="section-title" id="hire-title" data-i18n="hire.title">Hire Me</h2>
+
+                <div class="hire__container bd-grid">
+                    <!-- Intro -->
+                    <div class="hire__intro hire__card">
+                        <h3 class="hire__headline" data-i18n="hire.headline">Joseph Ndomu - Tech Support | Web Management | Graphic Design</h3>
+                        <p class="hire__lead" data-i18n="hire.intro">Technical support engineer, web manager and graphic designer based in Yaoundé. I solve technical problems, build and manage websites, and create designs and videos that get noticed.</p>
+
+                        <p class="hire__role">
+                            <span class="hire__badge" data-i18n="hire.role.label">Current role</span>
+                            <span data-i18n-html="hire.role.text.html"><strong>Tech Support &amp; Web Manager</strong> for MINAC and DCPA (Cameroon). I built their websites and I manage them.</span>
+                        </p>
+
+                        <div class="hire__actions">
+                            <a href="/assets/Joseph_Ndomu_CV.pdf" class="button hire__btn hire__btn--primary" download>
+                                <i class='bx bx-download' aria-hidden="true"></i> <span data-i18n="hire.btn.cv">Download my CV</span>
+                            </a>
+                            <a href="mailto:josephndomu@gmail.com" class="hire__btn hire__btn--ghost">
+                                <i class='bx bx-envelope' aria-hidden="true"></i> <span data-i18n="hire.btn.contact">Contact me</span>
+                            </a>
+                            <a href="https://wa.me/237676731632" class="hire__btn hire__btn--ghost" target="_blank" rel="noopener">
+                                <i class='bx bxl-whatsapp' aria-hidden="true"></i> <span data-i18n="hire.btn.whatsapp">WhatsApp</span>
+                            </a>
+                            <a href="tel:+237676731632" class="hire__btn hire__btn--ghost">
+                                <i class='bx bx-phone' aria-hidden="true"></i> <span data-i18n="hire.btn.call">Call 676 731 632</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/joseph-ndomu-403250239" class="hire__btn hire__btn--ghost" target="_blank" rel="noopener">
+                                <i class='bx bxl-linkedin' aria-hidden="true"></i> <span data-i18n="hire.btn.linkedin">LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Experience -->
+                    <div class="hire__card">
+                        <h3 class="hire__subtitle"><i class='bx bx-briefcase-alt-2' aria-hidden="true"></i> <span data-i18n="hire.exp.title">Experience</span></h3>
+                        <ol class="hire__timeline">
+                            <li>
+                                <span class="hire__date" data-i18n="hire.exp1.date">2025 - present</span>
+                                <strong data-i18n="hire.exp1.role">Technical Support Engineer L1</strong>
+                                <span class="hire__org" data-i18n="hire.exp1.org">Primeshare Academy</span>
+                            </li>
+                            <li>
+                                <span class="hire__date" data-i18n="hire.exp2.date">2023 - present</span>
+                                <strong data-i18n="hire.exp2.role">Graphic Designer &amp; Business Owner</strong>
+                                <span class="hire__org" data-i18n="hire.exp2.org">Ballo Doxa / NJ Graphics. Clients include KOICA Cameroon.</span>
+                            </li>
+                            <li>
+                                <span class="hire__date" data-i18n="hire.exp3.date">2022 - 2024</span>
+                                <strong data-i18n="hire.exp3.role">C++ and Computer Science Tutor</strong>
+                                <span class="hire__org" data-i18n="hire.exp3.org">Preply</span>
+                            </li>
+                            <li>
+                                <span class="hire__date" data-i18n="hire.exp4.date">2022 - 2024</span>
+                                <strong data-i18n="hire.exp4.role">Front Desk &amp; Customer Service</strong>
+                                <span class="hire__org" data-i18n="hire.exp4.org">BI'S Restaurant</span>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <!-- Skills -->
+                    <div class="hire__card">
+                        <h3 class="hire__subtitle"><i class='bx bx-wrench' aria-hidden="true"></i> <span data-i18n="hire.skills.title">Skills</span></h3>
+
+                        <p class="hire__group" data-i18n="hire.skills.support">Tech support &amp; troubleshooting</p>
+                        <ul class="hire__tags">
+                            <li>Windows</li><li>Linux</li><li>macOS</li><li>TCP/IP</li><li>DNS</li><li>VPN</li><li>Wi-Fi</li><li>LAN/WAN</li>
+                        </ul>
+
+                        <p class="hire__group" data-i18n="hire.skills.web">Web</p>
+                        <ul class="hire__tags">
+                            <li data-i18n="hire.skills.web1">Website design</li><li data-i18n="hire.skills.web2">Website management</li>
+                        </ul>
+
+                        <p class="hire__group" data-i18n="hire.skills.code">Programming</p>
+                        <ul class="hire__tags">
+                            <li>C++</li><li>Python</li><li>Bash</li><li>Arduino</li>
+                        </ul>
+
+                        <p class="hire__group" data-i18n="hire.skills.creative">Creative</p>
+                        <ul class="hire__tags">
+                            <li data-i18n="hire.skills.creative1">Graphic design &amp; branding</li><li data-i18n="hire.skills.creative2">Video editing</li><li data-i18n="hire.skills.creative3">Social media management</li>
+                        </ul>
+                    </div>
+
+                    <!-- Certifications / Education / Languages -->
+                    <div class="hire__facts">
+                        <div class="hire__card">
+                            <h3 class="hire__subtitle"><i class='bx bx-award' aria-hidden="true"></i> <span data-i18n="hire.certs.title">Certifications</span></h3>
+                            <ul class="hire__list">
+                                <li>CompTIA A+</li>
+                                <li>Cisco CCNA</li>
+                                <li>NexGen Robotics (Arduino)</li>
+                                <li data-i18n="hire.certs.food">Food Safety</li>
+                                <li data-i18n="hire.certs.service">Customer Service Excellence</li>
+                            </ul>
+                        </div>
+                        <div class="hire__card">
+                            <h3 class="hire__subtitle"><i class='bx bxs-graduation' aria-hidden="true"></i> <span data-i18n="hire.edu.title">Education</span></h3>
+                            <ul class="hire__list">
+                                <li><strong data-i18n="hire.edu1">Bachelor's in Software Engineering</strong><br><span class="hire__org" data-i18n="hire.edu1.org">Siantou University</span></li>
+                                <li><strong data-i18n="hire.edu2">HND in Software</strong></li>
+                            </ul>
+                        </div>
+                        <div class="hire__card">
+                            <h3 class="hire__subtitle"><i class='bx bx-world' aria-hidden="true"></i> <span data-i18n="hire.lang.title">Languages</span></h3>
+                            <ul class="hire__list">
+                                <li data-i18n="hire.lang.en">English: fluent</li>
+                                <li data-i18n="hire.lang.fr">French: intermediate</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Selected work -->
+                    <div class="hire__work">
+                        <div class="hire__work-head">
+                            <h3 class="hire__subtitle" data-i18n="hire.work.title">Selected work</h3>
+                            <a href="#work" class="hire__link"><span data-i18n="hire.work.all">See all work</span> <i class='bx bx-right-arrow-alt' aria-hidden="true"></i></a>
+                        </div>
+                        <ul class="hire__strip">
+                            <li><img src="assets/img/work1.jpg" alt="Selected design project by Joseph Ndomu" data-i18n-alt="hire.work.alt" width="640" height="426" loading="lazy" decoding="async"></li>
+                            <li><img src="assets/img/work2.jpg" alt="Selected design project by Joseph Ndomu" data-i18n-alt="hire.work.alt" width="640" height="426" loading="lazy" decoding="async"></li>
+                            <li><img src="assets/img/work7.jpg" alt="Selected design project by Joseph Ndomu" data-i18n-alt="hire.work.alt" width="640" height="426" loading="lazy" decoding="async"></li>
+                            <li><img src="assets/img/work11.jpg" alt="Selected design project by Joseph Ndomu" data-i18n-alt="hire.work.alt" width="640" height="426" loading="lazy" decoding="async"></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <!--===== FOOTER =====-->
         <footer class="footer">
             <p class="footer__title">EL JOSEPH.N</p>
             <div class="footer__social">
-                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
-                <a href="https://wa.me/message/B34WHMI4IFMAK1" class="footer__icon"><i class='bx bxl-whatsapp' ></i></a>
-               
-            </div>
-            <p class="footer__copy">&#169; EL JOSEPH.N. All rigths reserved</p>
-        </footer>
-       
+                <a href="#" class="footer__icon" aria-label="Facebook"><i class='bx bxl-facebook' ></i></a>
+                <a href="#" class="footer__icon" aria-label="Instagram"><i class='bx bxl-instagram' ></i></a>
+                <a href="#" class="footer__icon" aria-label="Twitter"><i class='bx bxl-twitter' ></i></a>
+                <a href="https://wa.me/message/B34WHMI4IFMAK1" class="footer__icon" aria-label="WhatsApp"><i class='bx bxl-whatsapp' ></i></a>
 
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
+            </div>
+            <p class="footer__copy" data-i18n="footer.copy">&#169; EL JOSEPH.N. All rights reserved</p>
+        </footer>
+
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal" defer></script>
     </body>
 </html>
